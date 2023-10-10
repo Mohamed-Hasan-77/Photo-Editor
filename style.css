@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    background-color: #333;
+}
+.parent {
+    width: 80vw;
+    background-color: #222;
+    margin: auto;
+    margin-top:  100px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap:wrap ;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+.parent .img {
+    /* background-color: white; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img .pic {
+    /* border: 1px solid white; */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img, canvas {
+    max-width: 95%;
+}
+.img .upload {
+    color: white;
+    font-size: 20px;
+    border: 1px dashed white;
+    padding: 5px 10px;
+    height: fit-content;
+    /* margin-top: 50px; */
+    cursor: pointer;
+}
+.img .upload label {
+    cursor: pointer;
+}
+.img .upload input {
+    display: none;
+}
+
+
+.parent .filters ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.parent .filters ul li  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.parent .filters ul li label  {
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.parent .filters ul li input  {
+    width: 100%;
+}
+.parent .filters ul li:last-child {
+    display: flex;
+    justify-content: space-evenly;
+}
+.parent .filters ul li a, span  {
+    padding: 5px 10px ;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(0, 128, 49);
+    cursor: pointer;
+}
+
+
+@media(max-width: 668px) {
+    .parent {
+        grid-template-columns: 1fr;
+    }
+    .img .upload {
+        margin-top: 35px
+    }
+}
